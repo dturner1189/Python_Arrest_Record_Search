@@ -1,0 +1,63 @@
+###########################################
+        RUN.sh
+###########################################
+
+entry point:
+    ./run.sh <-X>
+where X is any of the following commands:
+
+    1)   -n
+    this means run a new pdf parse and generate a new sorted
+    list from the results of the pdf breakdowns. This is a lengthy
+    operation (3 mins for 20,000 pdfs). This will not take into account
+    previous correct entrys, this will delete all previous
+    text files and start new.
+
+
+    2)   -u
+    This means update. this will check the log and determine
+    the last date an arrest record was scraped from the internet
+    and check for all new records up untill todays date.
+
+
+    3)   -gui
+    Just launch the gui feature. this assumes the current records
+    have been instrted already or this is for offline use where the
+    user does not need to find more current records or lastly for
+    maintence procedures by the maintainer.
+
+    4)   -log
+    Show contents of LOG.d file.
+
+############################################
+
+
+Each average booking report .pdf file is about
+750 Kb = 0.7327148 Mb = 0.0007155418 Gb
+
+Means that 10,000 .pdf files will
+be about 7.15 G of data. Not bad.
+
+Files are saved as .pdfs in binary.
+
+
+http://media.graytvinc.com/documents/LCSO+Daily+Booking+Report1.pdf
+
+# Possiable addition in future
+booking_report_rare = [ "Daily+Booking+Report+", "LCSO+booking+report+",
+"Booking+", "Bookings+", "Bookings+Report+", "Booking+Reports+",
+"booking+report+", "LCSO+daily+booking+report+", "daily+booking+report+",
+"booking+", "bookings+", "bookings+report+", "booking+reports+" ]
+
+years_long = [ "2000", "2001", "2002", "2003", "2004", "2005",
+"2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013",
+"2014", "2015", "2016", "2017", "2018", "2019", "2020" ]
+
+months_short = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug",
+"Sep", "Oct", "Nov", "Dec", "jan", "feb", "mar", "apr", "may", "jun",
+"jul", "aug", "sep", "oct", "nov", "dec" ]
+
+months_long = [ "January", "February", "March", "April", "May", "June", "July",
+"August", "September", "October", "November", "December", "january",
+"february", "march", "april", "may", "june", "july", "august", "september",
+"october", "november", "december" ]
